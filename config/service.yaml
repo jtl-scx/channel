@@ -1,0 +1,20 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  _instanceof:
+    JTL\SCX\Lib\Channel\Core\Command\AbstractCommand:
+      tags: ['console.command']
+    JTL\Nachricht\Contract\Listener\Listener:
+      public: true
+
+  Psr\Log\LoggerInterface: '@Monolog\Logger'
+
+  JTL\Nachricht\Contract\Emitter\Emitter: '@JTL\Nachricht\Emitter\AmqpEmitter'
+
+  JTL\SCX\Channel\:
+    resource: '../src/*'
+
+  # Add your services below
