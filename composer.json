@@ -30,5 +30,7 @@
         "phpcs-dry": [
             "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist --dry-run"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
 }

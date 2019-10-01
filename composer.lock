@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e35bb8c17f72c1182179139f20319e6",
+    "content-hash": "8a2c8ed0b2cae5b4b06b6a138793496f",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -240,14 +240,16 @@
             "dist": {
                 "type": "path",
                 "url": "/home/patric/Dev/scx/channel-lib",
-                "reference": "8f21b5e6c1de33f6600d1a4dc7fc588ab044f2f2"
+                "reference": "e2932fd6879bb0024658373b878a600f29db9333"
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3",
                 "jtl/channel-api-client": "^0.0.2",
-                "jtl/nachricht": "^0.0.2",
+                "jtl/nachricht": "dev-amqp_queue_discovery",
                 "jtl/scx-api-client": "^0.0.1",
+                "monolog/monolog": "^2.0",
                 "php-amqplib/php-amqplib": "^2.10",
+                "psr/log": "^1.1",
                 "symfony/config": "^4.3",
                 "symfony/console": "^4.3",
                 "symfony/dependency-injection": "^4.3",
@@ -266,20 +268,28 @@
                     "JTL\\SCX\\Lib\\Channel\\": "src/"
                 }
             },
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist"
+                ],
+                "phpcs-dry": [
+                    "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist --dry-run"
+                ]
+            },
             "description": "SCX Channel Library"
         },
         {
             "name": "jtl/nachricht",
-            "version": "0.0.2",
+            "version": "dev-amqp_queue_discovery",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-software/nachricht.git",
-                "reference": "eceb2c26e6dfd0696b1bc6617463c046b87caf18"
+                "reference": "ed5e338dad7a8bb8480a67812fd714d465d987d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-software/nachricht/zipball/eceb2c26e6dfd0696b1bc6617463c046b87caf18",
-                "reference": "eceb2c26e6dfd0696b1bc6617463c046b87caf18",
+                "url": "https://api.github.com/repos/jtl-software/nachricht/zipball/ed5e338dad7a8bb8480a67812fd714d465d987d9",
+                "reference": "ed5e338dad7a8bb8480a67812fd714d465d987d9",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +323,7 @@
                 "MIT"
             ],
             "description": "Nachricht is a distributed event queue system",
-            "time": "2019-09-24T12:24:30+00:00"
+            "time": "2019-10-01T15:42:09+00:00"
         },
         {
             "name": "jtl/php-generic-collection",
@@ -4862,11 +4872,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "jtl/channel-lib": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
