@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a2c8ed0b2cae5b4b06b6a138793496f",
+    "content-hash": "a526bb551a7d8c00cfbf587da237d8c8",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -239,8 +239,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/home/patric/Dev/scx/channel-lib",
-                "reference": "e2932fd6879bb0024658373b878a600f29db9333"
+                "url": "/home/marius/Projects/scx/channel-lib",
+                "reference": "edb3d10976ef0ffaee1684ffd0b18878461932e7"
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3",
@@ -2937,18 +2937,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "role": "Developer",
-                    "email": "sebastian@phpeople.de"
+                    "email": "sebastian@phpeople.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "Developer",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -4813,8 +4813,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

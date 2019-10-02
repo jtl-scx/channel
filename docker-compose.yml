@@ -1,7 +1,7 @@
 version: "3"
 services:
   php-fpm:
-    image: php:7.3.9-fpm-alpine
+    build: docker/php-fpm
     working_dir: /application
     volumes:
       - ./:/application/source
@@ -11,3 +11,14 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
+  pgsql:
+    image: postgres
+    container_name: skelpg
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./var/db:/var/lib/posgresql/data
+    environment:
+      POSTGRES_USER: skeleton
+      POSTGRES_PASSWORD: skel
+      POSTGRES_DB: skeldb

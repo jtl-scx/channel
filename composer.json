@@ -20,7 +20,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/home/patric/Dev/scx/channel-lib"
+            "url": "/home/marius/Projects/scx/channel-lib"
         }
     ],
     "scripts": {
