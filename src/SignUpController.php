@@ -8,14 +8,37 @@
 
 namespace JTL\SCX\Channel;
 
-class SignUpController
+use JTL\SCX\Lib\Channel\Controller\AbstractSignUpController;
+
+class SignUpController extends AbstractSignUpController
 {
-    public function signUp(string $username, string $password): bool
+    /**
+     * @param string $session
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+    public function index(?string $session): void
     {
+        $this->renderTemplate();
+    }
+
+    /**
+     * @param string $username
+     * @param string $password
+     * @param string $session
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+    public function signUp(?string $username, ?string $password, ?string $session): void
+    {
+        $signUpSuccessful = false;
+
         if ($username === 'test' && $password === 'foo') {
-            return true;
+            $signUpSuccessful = true;
         }
 
-        return false;
+        $this->renderTemplate(['signUpSuccessful' => $signUpSuccessful]);
     }
 }

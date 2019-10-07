@@ -7,18 +7,18 @@
  */
 
 use JTL\SCX\Channel\SignUpController;
-use JTL\SCX\Lib\Channel\Template\TwigTemplateRenderer;
 
 require_once __DIR__ . '/../include/common.php';
 
-$params = [];
+$username = $_POST['username'] ?? null;
+$password = $_POST['password'] ?? null;
+$session = $_GET['session'] ?? null;
+
+/** @var SignUpController $controller */
+$controller = $container->get(SignUpController::class);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    /** @var SignUpController $controller */
-    $controller = $container->get(SignUpController::class);
-    $params['signUpSuccessful'] = $controller->signUp($_POST['username'], $_POST['password']);
+    $controller->signUp($username, $password, $session);
+} else {
+    $controller->index($session);
 }
-
-/** @var TwigTemplateRenderer $renderer */
-$renderer = $container->get(TwigTemplateRenderer::class);
-echo $renderer->render('signup.twig', $params);
