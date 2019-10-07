@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% set title="Test" %}
+{% block body %}
+    <div class="page">
+        <div class="container">
+            <img class="logo" src="images/JTL-SCX.svg" alt="Logo"/>
+            <div class="box">
+                <form class="pure-form pure-form-stacked" method="post">
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="name">Username</label>
+                            <input id="username" name="username" type="text" placeholder="Username">
+                        </div>
+
+                        <div class="pure-control-group pt-4">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" placeholder="Password">
+                        </div>
+
+                        <div class="pure-controls pt-4">
+                            <button type="submit" class="pure-button pure-button-primary button">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                {% if signUpSuccessful is defined %}
+                    {% if signUpSuccessful %}
+                        <h3>Successful</h3>
+                    {% else %}
+                        <h3>Error</h3>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

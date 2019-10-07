@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    max-width: 25vw;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 3rem;
+    border: 1px solid #b8b8b8;
+    -webkit-box-shadow: 28px 4px 33px 0px rgba(61,61,61,0.55);
+    -moz-box-shadow: 28px 4px 33px 0px rgba(61,61,61,0.55);
+    box-shadow: 28px 4px 33px 0px rgba(61,61,61,0.55);
+    align-self: flex-start;
+}
+
+.pt-4 {
+    padding-top: 1.25rem;
+}
+
+.button {
+    border-radius: 4px;
+}
+
+.logo {
+    width: 20vw;
+}
+
+body {
+    background-color: rgb(245, 247, 250);
+}

@@ -17,4 +17,7 @@ services:
   JTL\SCX\Channel\:
     resource: '../src/*'
 
+  JTL\SCX\Channel\SignUpController:
+    public: true
+
   # Add your services below
