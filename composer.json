@@ -20,8 +20,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "/home/patric/Dev/scx/channel-lib"
+            "type": "vcs",
+            "url": "git@gitlab.jtl-software.com:ea/scx/channel-lib.git"
         }
     ],
     "scripts": {
