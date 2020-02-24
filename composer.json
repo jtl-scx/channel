@@ -17,12 +17,6 @@
             "JTL\\SCX\\Channel\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@gitlab.jtl-software.com:ea/scx/channel-lib.git"
-        }
-    ],
     "scripts": {
         "phpcs": [
             "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist"
@@ -31,6 +25,5 @@
             "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist --dry-run"
         ]
     },
-    "minimum-stability": "dev",
     "prefer-stable" : true
 }
