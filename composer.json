@@ -1,5 +1,6 @@
 {
     "name": "jtl-scx/channel",
+    "license": "MIT",
     "require": {
         "symfony/console": "^4.3",
         "symfony/dotenv": "^4.3",
