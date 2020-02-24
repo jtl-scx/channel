@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# docker-compose exec chn-app -w /application/source php source/bin/Channel.php $@
+docker-compose exec chn-app php source/bin/Channel.php "$@"

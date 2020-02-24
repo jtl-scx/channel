@@ -12,7 +12,7 @@ use Symfony\Component\Dotenv\Dotenv;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = new Dotenv();
-$dotenv->load(__DIR__ . '/../.env');
+$dotenv->loadEnv(__DIR__ . '/../.env');
 
 $core = new ApplicationContext(
     $_ENV['IS_DEVELOPMENT'] === 'true',

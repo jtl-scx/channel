@@ -13,12 +13,13 @@ use JTL\SCX\Lib\Channel\Controller\AbstractSignUpController;
 class SignUpController extends AbstractSignUpController
 {
     /**
-     * @param string $session
+     * @param string|null $session
+     * @param string|null $expiresAt
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index(?string $session): void
+    public function index(?string $session, ?string $expiresAt): void
     {
         $this->renderTemplate();
     }
