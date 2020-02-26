@@ -1,0 +1,15 @@
+{
+    "sellerId": "334334343",
+    "offerId": 4711,
+    "priceList": [
+        {
+            "id": "B2C",
+            "quantityPriceList": [
+                {
+                    "amount": "5.23",
+                    "currency": "EUR"
+                }
+            ]
+        }
+    ]
+}

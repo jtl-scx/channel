@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dd4572fcb14ce25ecc77936b039d6fb",
+    "content-hash": "aa82a29e10ee1ccdf81b563f86737a43",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -280,16 +280,16 @@
         },
         {
             "name": "jtl-scx/channel-core",
-            "version": "0.9.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-core.git",
-                "reference": "bdbbbb654f51b7fd5054227d6280ed1d771e498a"
+                "reference": "97465e71e682838fb079509f3f26d7e417769a4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/bdbbbb654f51b7fd5054227d6280ed1d771e498a",
-                "reference": "bdbbbb654f51b7fd5054227d6280ed1d771e498a",
+                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/97465e71e682838fb079509f3f26d7e417769a4b",
+                "reference": "97465e71e682838fb079509f3f26d7e417769a4b",
                 "shasum": ""
             },
             "require": {
@@ -297,7 +297,7 @@
                 "guzzlehttp/guzzle": "^6.3",
                 "jtl-scx/api-base-client": "^1.0",
                 "jtl-scx/channel-api-client": "^0.9",
-                "jtl/nachricht": "~0.5",
+                "jtl/nachricht": "^0.7",
                 "monolog/monolog": "^2.0",
                 "myclabs/php-enum": "^1.7",
                 "php-amqplib/php-amqplib": "^2.10",
@@ -326,7 +326,7 @@
                 "MIT"
             ],
             "description": "SCX Channel Library",
-            "time": "2020-02-24T10:51:51+00:00"
+            "time": "2020-02-26T12:33:35+00:00"
         },
         {
             "name": "jtl/nachricht",
@@ -4546,8 +4546,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "jtl-scx/channel-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
