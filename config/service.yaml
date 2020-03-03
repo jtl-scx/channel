@@ -25,11 +25,9 @@ services:
 
   # Meta Data Services
 
-  JTL\SCX\Lib\Channel\Contract\MetaData\MetaCategoryLoader:
-    class: JTL\SCX\Channel\MetaData\CategoryTreeLoader
+  JTL\SCX\Lib\Channel\Contract\MetaData\MetaCategoryLoader: '@JTL\SCX\Channel\Demo\MetaData\CategoryTreeLoader'
 
-  #JTL\SCX\Lib\Channel\Contract\MetaData\MetaDataAttributeLoader:
-  #  class: JTL\SCX\Channel\MetaData\Attribute\MetaCategoryAttributeLoader
+  JTL\SCX\Lib\Channel\Contract\MetaData\MetaDataAttributeLoader: '@JTL\SCX\Channel\Demo\MetaData\Attribute\CategoryAttributeLoader'
 
   # JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader:
   #   class: JTL\SCX\Channel\MetaData\Attribute\SellerAttributeLoader

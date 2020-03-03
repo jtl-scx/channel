@@ -6,7 +6,7 @@
  * Date: 2/24/20
  */
 
-namespace JTL\SCX\Channel\MetaData;
+namespace JTL\SCX\Channel\Demo\MetaData;
 
 use JTL\SCX\Lib\Channel\Contract\MetaData\MetaCategoryLoader;
 use JTL\SCX\Lib\Channel\MetaData\Category;
@@ -19,7 +19,10 @@ class CategoryTreeLoader implements MetaCategoryLoader
         $categoryList = new CategoryList();
 
         // 1. fetch category tree - from channel
-        $categories = [];
+        $categories = [
+            ['id' => 'CAT1', 'name' => 'Category A', 'parentId' => null, 'listingAllowed' => false],
+            ['id' => 'CAT2', 'name' => 'Category A', 'parentId' => 'CAT1', 'listingAllowed' => true]
+        ];
 
         // 2. build a categoryList
         foreach ($categories as $category) {

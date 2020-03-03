@@ -1,13 +1,13 @@
 # Meta Data
 
-A channel integration need to send 
-
-## Send Category Tree Data
+A channel integration need to send Meta Data to SCX to describe how Offer can be listed and which rules need to apply.
+ 
+## Category Tree
 
 API Documentation: [Create Category Tree](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateChannelCategoryTree)
 
 If a connected marketplace require that offers are listed in certain categories a channel integration must push
-a category tree to SCX. To create a category tree just implement `MetaCategoryLoader` and register the implementation
+a category tree to SCX. To create a category tree mapper implement `MetaCategoryLoader` and register the implementation
 via `service.yml` 
 
 The skeleton is shipped with a very basic default implementation. Just run.
@@ -16,10 +16,32 @@ The skeleton is shipped with a very basic default implementation. Just run.
 ./run scx-api:put.category-tree
 ````
 
-## Send Attributes
+If you check the `config/service.yml` you will notice a registered service for the `MetaCategoryLoader`
 
+````yaml
+  JTL\SCX\Lib\Channel\Contract\MetaData\MetaCategoryLoader:
+    class: JTL\SCX\Channel\MetaData\CategoryTreeLoader
+````
 
+There is always a full replacement of an category tree. Partial updates are not yet supported.
 
+## Category Attributes
+
+API Documentation: [Create Category Attributes](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateCategoryAttributes)
+
+Typically each Category has there own set on Attributes to send category. 
+
+````bash
+./run scx-api:put.attributes-category <categoryId>
+````
+
+## Global Attributes
+
+API Documentation: [Create Global Attributes](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateGlobalAttributes)
+
+## Seller Attributes
+
+API Documentation: [Create Seller Attributes](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateSellerAttributes)
 
 ## Price Types
 
@@ -53,7 +75,7 @@ A Seller integration will provide prices through prices types when sending
                 }
             ]
         }
-    ]
-    // ...
+    ],
+    "...": "..."
 }
 ````

@@ -1,0 +1,69 @@
+[
+  {
+    "attributeId": "seller:shippingGroup",
+    "displayName": "Versandgruppe",
+    "isMultipleAllowed": false,
+    "required": true,
+    "type": "smalltext",
+    "section": "Versand",
+    "sectionPosition": 1,
+    "description": "Shipping groups."
+  },
+  {
+    "attributeId": "seller:warehouse",
+    "displayName": "Lager",
+    "isMultipleAllowed": false,
+    "required": true,
+    "type": "smalltext",
+    "section": "Versand",
+    "sectionPosition": 2,
+    "description": "Bitte beachten Sie, dass Sie - sollten mehrere Lager hinterlegt worden sein - diese entsprechend bei der Listung Ihrer Angebote angeben müssen. In Ihrer Angebotsdatei können Sie dies z.B. über die Spalte \\\"warehouse\\\" vornehmen. Sollten Sie kein Lager bei der Listung Ihrer Angebote angeben, gehen wir davon aus, dass das von Ihnen zuerst angelegte Lager die Versendungsstätte ist und hinterlegen dies automatisch.\n\nSollten Sie lediglich ein Lager angegeben haben, hinterlegen wir dieses ebenfalls automatisch als Standardlager."
+  },
+  {
+    "attributeId": "global:deliveryTimeMin",
+    "displayName": "Lieferzeit Min.",
+    "isMultipleAllowed": false,
+    "required": true,
+    "type": "integer",
+    "section": "Versand",
+    "sectionPosition": 3,
+    "description": "Die minimale Anzahl an Tagen bis die Ware den Kunden erreicht."
+  },
+  {
+    "attributeId": "global:deliveryTimeMax",
+    "displayName": "Lieferzeit Max.",
+    "isMultipleAllowed": false,
+    "required": true,
+    "type": "integer",
+    "section": "Versand",
+    "sectionPosition": 4,
+    "description": "Die maximale Anzahl an Tagen bis die Ware den Kunden erreicht."
+  },
+  {
+    "attributeId": "global:condition",
+    "displayName": "Zustand",
+    "isMultipleAllowed": false,
+    "required": true,
+    "type": "enum",
+    "enumValues": [
+      "new",
+      "used - as new",
+      "used - very good",
+      "used - good",
+      "used - acceptable",
+      "download"
+    ],
+    "description": "Artikelzusatand."
+  },
+  {
+    "attributeId": "global:mpn",
+    "displayName": "NPM",
+    "isMultipleAllowed": false,
+    "required": false,
+    "type": "smalltext",
+    "description": "Hersteller Arikelnummer."
+  }
+]
+
+
+
