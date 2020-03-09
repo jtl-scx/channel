@@ -14,16 +14,16 @@ services:
 
   JTL\Nachricht\Contract\Emitter\Emitter: '@JTL\Nachricht\Emitter\AmqpEmitter'
 
-  JTL\SCX\Channel\SignUpController:
-    public: true
-
   # DI Setup - if you change the namespace of your project
   # consider to change the namespace below to a working DI container
 
   JTL\SCX\Channel\:
     resource: '../src/*'
 
-  # Meta Data Services
+  JTL\SCX\Channel\SignUpController:
+    public: true
+
+  # Meta Data Services - Demo implementation
 
   JTL\SCX\Lib\Channel\Contract\MetaData\MetaCategoryLoader: '@JTL\SCX\Channel\Demo\MetaData\CategoryTreeLoader'
 
