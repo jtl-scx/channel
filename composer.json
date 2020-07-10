@@ -2,9 +2,9 @@
     "name": "jtl-scx/channel",
     "license": "MIT",
     "require": {
-        "symfony/console": "^4.3",
-        "symfony/dotenv": "^4.3",
-        "jtl-scx/channel-core": "^0.9",
+        "symfony/console": "^5.0",
+        "symfony/dotenv": "^5.0",
+        "jtl-scx/channel-core": "^0.24",
         "monolog/monolog": "^2.0",
         "twig/twig": "^2.0"
     },
