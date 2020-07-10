@@ -1,0 +1,36 @@
+{
+    "sellerId": "334334343",
+    "offerId": 4711,
+    "sku": "SKU_4711",
+    "channelCategoryId": "Auto",
+    "quantity": 1,
+    "priceList": [
+        {
+            "id": "B2C",
+            "quantityPriceList": [
+                {
+                    "amount": "5.23",
+                    "currency": "EUR"
+                }
+            ]
+        }
+    ],
+    "title": "Offer Title",
+    "subTitle": "Offer SubTitle",
+    "description": "This is great offer",
+    "mainPicture": "",
+    "pictureList": [],
+    "channelAttributeList": [
+        {"attributeId":  "color", "value":  "red"},
+        {"attributeId":  "color", "value":  "green"},
+        {"attributeId":  "size", "value":  "small"}
+    ],
+    "ean": "",
+    "gtin": "",
+    "upc": "",
+    "isbn": "",
+    "srp" : {
+        "amount": "12.43",
+        "currency": "EUR"
+    }
+}

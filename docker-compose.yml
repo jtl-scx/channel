@@ -4,24 +4,21 @@ services:
   chn-app:
     build: docker/chn-app
     working_dir: /application
-    container_name: chn-app
     volumes:
       - ./:/application/source
       - ./var:/application/var:rw
 
   chn-queue:
     image: rabbitmq:management-alpine
-    container_name: chn-queue
     ports:
       - "15672:15672"
 
   chn-web:
     image: nginx:latest
     working_dir: /application
-    container_name: chn-web
     volumes:
       - ./docker/chn-web/nginx.conf:/etc/nginx/conf.d/default.conf
       - .:/application/source
       - ./var:/application/var
     ports:
-      - "8181:8181"
+      - "8080:8181"
