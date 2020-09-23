@@ -1,0 +1,16 @@
+{
+    "supportedCarrierList": [
+        {
+            "carrierId": "1",
+            "displayName": "Other"
+        },
+        {
+            "carrierId": "2",
+            "displayName": "DHL"
+        },
+        {
+            "carrierId": "3",
+            "displayName": "UPS"
+        }
+    ]
+}

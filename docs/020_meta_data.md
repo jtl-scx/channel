@@ -1,20 +1,23 @@
-# Meta Data
+# Metadata
 
-A channel integration need to send Meta Data to SCX to describe how Offer can be listed and which rules need to apply.
+A channel integration need to send Metadata to SCX to describe how a Offer can be listed and which rules need to apply.
  
 ## Category Tree
 
 API Documentation: [Create Category Tree](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateChannelCategoryTree)
 
-If a connected marketplace require that offers are listed in certain categories a channel integration must push
-a category tree to SCX. To create a category tree mapper implement `MetaCategoryLoader` and register the implementation
-via `service.yml` 
+Typically, a connected marketplace require that offers are getting listed in a certain category. So your channel implementation 
+need to provide a category tree. 
 
-The skeleton is shipped with a very basic default implementation. Just run.
+By executing the command below you can send your category tree to SCX Channel API
 
 ````bash
 ./run scx-api:put.category-tree
 ````
+
+The skeleton project provide a very basic default implementation for a Category Tree Loader. To create your own 
+Category Tree Loader just implement `MetaCategoryLoader` Interface and register your implementation for DI 
+using, `service.yml` 
 
 If you check the `config/service.yml` you will notice a registered service for the `MetaCategoryLoader`
 
@@ -23,17 +26,26 @@ If you check the `config/service.yml` you will notice a registered service for t
     class: JTL\SCX\Channel\MetaData\CategoryTreeLoader
 ````
 
-There is always a full replacement of an category tree. Partial updates are not yet supported.
+There is always a full replacement of a category tree. Partial updates not supported.
 
 ## Category Attributes
 
 API Documentation: [Create Category Attributes](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateCategoryAttributes)
 
-Typically each Category has there own set on Attributes to send category. 
+Typically, each Category has their own set of Attributes. Such Category Attributes need to transmit by using the Command 
+below.  
 
 ````bash
 ./run scx-api:put.attributes-category <categoryId>
 ````
+
+The skeleton project provide a very basic default implementation for am Attribute Loader. To create your own 
+Loader implementation just implement `MetaDataCategoryAttributeLoader` Interface and register your implementation 
+for DI using, `service.yml` 
+
+To upload Category Attributes for the complete Category Tree, run `scx-api:put.category-tree` with option 
+`--dump-categories-to-file`. This will write all Category ID into a CSV File. Afterwards you may run 
+the `scx-api:put.attributes-category` by using CLI option `--dump-categories-to-file`. 
 
 ## Global Attributes
 
@@ -48,7 +60,7 @@ API Documentation: [Create Seller Attributes](https://scx-sandbox.ui.jtl-softwar
 API Documentation: [Supported Prices](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#tag/Supported-Prices)
 
 SCX require information about the type of Prices which are supported by a Channel Integration. A Price Type specify the price 
-for which a offer is getting listed to specific customer group on a connected Marketplace. Typical Prices Types are 
+for which an offer is getting listed to specific customer group on a connected Marketplace. Typical Prices Types are 
 B2C (Business to Customer) or B2B (Business to Business).
 
 You can simply create a B2B price type by execute command below
@@ -78,4 +90,20 @@ A Seller integration will provide prices through prices types when sending
     ],
     "...": "..."
 }
+````
+
+## Payment Rules
+
+API Documentation: [Payment Rules](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/PutPaymentRules)
+
+````bash
+./run scx-api:put.payment-rules a_payment_rule_file.json
+````
+ 
+## SHipping Rules
+
+API Documentation: [Shipping Rules](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/PutShippingRules)
+
+````bash
+./run scx-api:put.payment-rules config/testShippingRules.json
 ````
