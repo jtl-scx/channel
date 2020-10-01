@@ -13,9 +13,12 @@ Skeleton Project to bootstrap a new SCX Channel Integration
 composer create-project jtl-scx/channel channel 0.11.0
 ````
 * You may setup your own namespace in `composer.json` (default: `JTL\SCX\Channel`)
+* Setup `.env.dist`
+  * deafult pointing to SCX Sandbox API
+  * add your API Token
 * Start development Environment
-** Run `docker-compose up -d` (this will create a nginx, php-fpm and a rabbitMQ container for you)
-** Run the application by execute `./run`
+  * Run `docker-compose up -d` (this will create a nginx, php-fpm and a rabbitMQ container for you)
+  * Run the application by execute `./run`
 
 ## Documentation
 
