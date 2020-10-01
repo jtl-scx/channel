@@ -1,6 +1,6 @@
 # Events and Messages
 
-Api Documentation
+Api Documentation [Seller Events](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/GetEvents)
 
 One important component of SCX are Seller and Channel Events. Seller Events are emitted by an Seller integration such 
 as JTL-Wawi, while Channel Events are emitted by an Channel Integration. Such an event is an action created by an actor 
