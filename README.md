@@ -10,7 +10,7 @@ Skeleton Project to bootstrap a new SCX Channel Integration
 
 * Install project by using composer
 ````
-composer create-project jtl-scx/channel channel 0.11.0
+composer create-project jtl-scx/channel channel 0.12.0
 ````
 * You may setup your own namespace in `composer.json` (default: `JTL\SCX\Channel`)
 * Setup `.env.dist`
