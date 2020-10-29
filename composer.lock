@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8e1cbb3f3ffc3cec5cc383075661ced",
+    "content-hash": "46ad14397e1485e9aff319df671c1a8b",
     "packages": [
         {
             "name": "brick/math",
@@ -289,16 +289,16 @@
         },
         {
             "name": "jtl-scx/channel-api-client",
-            "version": "0.21.1",
+            "version": "0.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-api-client.git",
-                "reference": "6a54dae673d48e8a1dddb18ccf7f2370bff8f813"
+                "reference": "51d9a9f32e1399374e48ae9f066ecab247bc2411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-api-client/zipball/6a54dae673d48e8a1dddb18ccf7f2370bff8f813",
-                "reference": "6a54dae673d48e8a1dddb18ccf7f2370bff8f813",
+                "url": "https://api.github.com/repos/jtl-scx/channel-api-client/zipball/51d9a9f32e1399374e48ae9f066ecab247bc2411",
+                "reference": "51d9a9f32e1399374e48ae9f066ecab247bc2411",
                 "shasum": ""
             },
             "require": {
@@ -328,27 +328,31 @@
                 "MIT"
             ],
             "description": "API Client for SCX Channel API",
-            "time": "2020-08-18T06:44:50+00:00"
+            "support": {
+                "issues": "https://github.com/jtl-scx/channel-api-client/issues",
+                "source": "https://github.com/jtl-scx/channel-api-client/tree/0.24.0"
+            },
+            "time": "2020-09-25T09:52:13+00:00"
         },
         {
             "name": "jtl-scx/channel-core",
-            "version": "0.27.0",
+            "version": "0.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-core.git",
-                "reference": "7f3ce2657c6510181c32c87d156fd55ef1906005"
+                "reference": "b8709820b2d7b1da4ea56e826d8465d58a6bf8ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/7f3ce2657c6510181c32c87d156fd55ef1906005",
-                "reference": "7f3ce2657c6510181c32c87d156fd55ef1906005",
+                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/b8709820b2d7b1da4ea56e826d8465d58a6bf8ca",
+                "reference": "b8709820b2d7b1da4ea56e826d8465d58a6bf8ca",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^6.3",
                 "jtl-scx/api-base-client": "^1.0",
-                "jtl-scx/channel-api-client": "^0.21.1",
+                "jtl-scx/channel-api-client": "^0.24.0",
                 "jtl/nachricht": "^0.10",
                 "monolog/monolog": "^2.0",
                 "myclabs/php-enum": "^1.7",
@@ -358,6 +362,7 @@
                 "symfony/console": "^5.1",
                 "symfony/dependency-injection": "^5.1",
                 "symfony/proxy-manager-bridge": "^5.1",
+                "symfony/translation": "^5.1",
                 "symfony/yaml": "^5.1"
             },
             "require-dev": {
@@ -378,7 +383,11 @@
                 "MIT"
             ],
             "description": "SCX Channel Library",
-            "time": "2020-09-14T13:45:11+00:00"
+            "support": {
+                "issues": "https://github.com/jtl-scx/channel-core/issues",
+                "source": "https://github.com/jtl-scx/channel-core/tree/0.30.0"
+            },
+            "time": "2020-10-29T09:24:36+00:00"
         },
         {
             "name": "jtl/nachricht",
@@ -2989,6 +2998,174 @@
                 }
             ],
             "time": "2020-08-17T07:48:54+00:00"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "v5.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "27980838fd261e04379fa91e94e81e662fe5a1b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/27980838fd261e04379fa91e94e81e662fe5a1b6",
+                "reference": "27980838fd261e04379fa91e94e81e662fe5a1b6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php80": "^1.15",
+                "symfony/translation-contracts": "^2"
+            },
+            "conflict": {
+                "symfony/config": "<4.4",
+                "symfony/dependency-injection": "<5.0",
+                "symfony/http-kernel": "<5.0",
+                "symfony/twig-bundle": "<5.0",
+                "symfony/yaml": "<4.4"
+            },
+            "provide": {
+                "symfony/translation-implementation": "2.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/console": "^4.4|^5.0",
+                "symfony/dependency-injection": "^5.0",
+                "symfony/finder": "^4.4|^5.0",
+                "symfony/http-kernel": "^5.0",
+                "symfony/intl": "^4.4|^5.0",
+                "symfony/service-contracts": "^1.1.2|^2",
+                "symfony/yaml": "^4.4|^5.0"
+            },
+            "suggest": {
+                "psr/log-implementation": "To use logging capability in translator",
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/translation/tree/v5.1.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T12:01:57+00:00"
+        },
+        {
+            "name": "symfony/translation-contracts",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation-contracts.git",
+                "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/e2eaa60b558f26a4b0354e1bbb25636efaaad105",
+                "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "suggest": {
+                "symfony/translation-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Translation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to translation",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/translation-contracts/tree/v2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-09-28T13:05:58+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -5885,5 +6062,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
