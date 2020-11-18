@@ -31,6 +31,9 @@ services:
 
   JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader: '@JTL\SCX\Channel\Demo\MetaData\SellerAttributeLoader'
 
+  JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeUpdateRequestListener:
+    class: JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeUpdateRequestListener
+
   # JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader:
   #   class: JTL\SCX\Channel\MetaData\Attribute\SellerAttributeLoader
 
