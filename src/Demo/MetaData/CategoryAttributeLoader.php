@@ -13,26 +13,31 @@ use JTL\SCX\Lib\Channel\Contract\MetaData\MetaDataCategoryAttributeLoader;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\Attribute;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeList;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeType;
+use JTL\SCX\Lib\Channel\MetaData\Attribute\CategoryAttributeList;
 
 class CategoryAttributeLoader implements MetaDataCategoryAttributeLoader
 {
 
-    public function fetch(string $categoryId): ?AttributeList
+    public function fetch(array $categoryIdList = null): ?CategoryAttributeList
     {
-        $attributeList = new AttributeList();
-        foreach ($this->loadAttributesById($categoryId) as $attribute) {
-            $attribute = new Attribute(
-                $attribute['id'],
-                $attribute['name'],
-                null,
-                true,
-                null,
-                AttributeType::SMALLTEXT()
-            );
-            $attributeList->add($attribute);
+        $categoryAttributeList = new CategoryAttributeList();
+        foreach ($categoryIdList as $categoryId) {
+
+            $attributeList = new AttributeList();
+            foreach ($this->loadAttributesById($categoryId) as $attribute) {
+                $attribute = new Attribute(
+                    $attribute['id'],
+                    $attribute['name'],
+                    null,
+                    true,
+                    null,
+                    AttributeType::SMALLTEXT()
+                );
+                $attributeList->add($attribute);
+            }
         }
 
-        return $attributeList;
+        return $categoryAttributeList;
     }
 
     private function loadAttributesById(string $categoryId): array
