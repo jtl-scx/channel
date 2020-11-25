@@ -55,6 +55,23 @@ API Documentation: [Create Global Attributes](https://scx-sandbox.ui.jtl-softwar
 
 API Documentation: [Create Seller Attributes](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#operation/CreateSellerAttributes)
 
+A Channel may provide a set of seller-specific Attributes. These attributes describe settings for offers which
+directly belong to a Seller. To send seller attributes to the Channel-Api just execute the following command:
+
+````bash
+./run scx-api:put.attributes-seller <sellerId>
+````
+
+This skeleton project provide a very basic default implementation for a Seller Attribute Loader. To create your own
+implementation, just implement the `SellerAttributeLoader` Interface and register your implementation for DI using `service.yml`
+### Update Request
+
+A Seller can request a Seller Attribute update by sending a Seller Event `Seller:Meta.SellerAttributesUpdateRequest`.
+When sellers request an update of their attributes, the channel needs to retrieve an up-to-date list of seller attributes
+and send this list to SCX. As a channel you only need to implement the interface `JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader`.
+Inside of this implementation you must return all attributes for a given sellerId in a `JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeList`.
+The `channel-core` takes care of everything else.
+
 ## Price Types
 
 API Documentation: [Supported Prices](https://scx-sandbox.ui.jtl-software.com/docs/api_channel.html#tag/Supported-Prices)
