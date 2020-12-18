@@ -4,7 +4,7 @@
     "require": {
         "symfony/console": "^5.0",
         "symfony/dotenv": "^5.0",
-        "jtl-scx/channel-core": "^0.36",
+        "jtl-scx/channel-core": "^0.41",
         "monolog/monolog": "^2.0",
         "twig/twig": "^2.0"
     },
