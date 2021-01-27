@@ -16,6 +16,15 @@ $dotenv->loadEnv(__DIR__ . '/../.env');
 
 $isDevelopment = $_ENV['IS_DEVELOPMENT'] === 'true';
 
+if (isset($_ENV['PHP_ERROR_LOG'])) {
+    ini_set('log_errors', 'On');
+    ini_set('error_reporting', E_ALL);
+    ini_set('error_log', $_ENV['PHP_ERROR_LOG']);
+}
+
+header("X-CHANNEL: " . $_ENV["CHANNEL_NAME"]);
+header("X-CHANNEL-APPSRV: " . gethostname());
+
 $rootDirectory = realpath(__DIR__ . '/..');
 
 $containerCache = $_ENV['DI_CONTAINER_CACHE'];
