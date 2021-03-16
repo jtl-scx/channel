@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46c50c6e316f445a04a64d1f9aa442f3",
+    "content-hash": "76066bc1d9c217549628ec1dabc7c9c9",
     "packages": [
         {
             "name": "brick/math",
@@ -608,16 +608,16 @@
         },
         {
             "name": "jtl-scx/channel-core",
-            "version": "0.52.0",
+            "version": "0.53.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-core.git",
-                "reference": "d2ff043243d6e3966dc73cab4bf7610e59f1b0c1"
+                "reference": "685f98403c97cfc59c1d7316e79477f250588019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/d2ff043243d6e3966dc73cab4bf7610e59f1b0c1",
-                "reference": "d2ff043243d6e3966dc73cab4bf7610e59f1b0c1",
+                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/685f98403c97cfc59c1d7316e79477f250588019",
+                "reference": "685f98403c97cfc59c1d7316e79477f250588019",
                 "shasum": ""
             },
             "require": {
@@ -662,9 +662,9 @@
             "description": "SCX Channel Library",
             "support": {
                 "issues": "https://github.com/jtl-scx/channel-core/issues",
-                "source": "https://github.com/jtl-scx/channel-core/tree/0.52.0"
+                "source": "https://github.com/jtl-scx/channel-core/tree/0.53.1"
             },
-            "time": "2021-03-11T08:10:37+00:00"
+            "time": "2021-03-15T15:18:59+00:00"
         },
         {
             "name": "jtl/nachricht",
@@ -1369,16 +1369,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede"
+                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
-                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/906a5fafabe5e6ba51ef3dc65b2722a677908837",
+                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837",
                 "shasum": ""
             },
             "require": {
@@ -1460,7 +1460,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.5"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.6"
             },
             "funding": [
                 {
@@ -1476,7 +1476,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-12T16:18:16+00:00"
+            "time": "2021-03-10T13:58:31+00:00"
         },
         {
             "name": "psr/container",
