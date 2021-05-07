@@ -21,7 +21,7 @@ class CategoryAttributeLoader implements MetaDataCategoryAttributeLoader
     public function fetch(array $categoryIdList = null): ?CategoryAttributeList
     {
         $categoryAttributeList = new CategoryAttributeList();
-        foreach ($categoryIdList as $categoryId) {
+        foreach ($categoryIdList ?? [] as $categoryId) {
 
             $attributeList = new AttributeList();
             foreach ($this->loadAttributesById($categoryId) as $attribute) {

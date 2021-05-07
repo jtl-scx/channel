@@ -1,0 +1,83 @@
+name: Testing
+
+on: [push]
+
+jobs:
+
+  static-analysis:
+
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - "7.4"
+
+    steps:
+      - name: "Install PHP"
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: xdebug3
+
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Install dependencies"
+        run: composer install --no-progress
+
+      - name: Run static code analysis
+        run: composer psalm
+
+  check-code-style:
+
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - "7.4"
+
+    steps:
+      - name: "Install PHP"
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: xdebug3
+
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Install dependencies"
+        run: composer install --no-progress
+
+      - name: Check Code Style
+        run: composer phpcs-dry
+
+  tests:
+
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - "7.4"
+
+    steps:
+      - name: "Install PHP"
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: xdebug3
+
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: "Install dependencies"
+        run: composer install --no-progress
+
+      - name: "Run test suite"
+        run: vendor/bin/phpunit --coverage-clover=coverage.xml

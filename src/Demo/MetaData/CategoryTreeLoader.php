@@ -20,16 +20,16 @@ class CategoryTreeLoader implements MetaCategoryLoader
 
         // 1. fetch category tree - from channel
         $categories = [
-            ['id' => 'CAT1', 'name' => 'Category A', 'parentId' => null, 'listingAllowed' => false],
+            ['id' => 'CAT1', 'name' => 'Category A', 'parentId' => '0', 'listingAllowed' => false],
             ['id' => 'CAT2', 'name' => 'Category A', 'parentId' => 'CAT1', 'listingAllowed' => true]
         ];
 
         // 2. build a categoryList
         foreach ($categories as $category) {
-            $id = (string)$category["id"];
-            $name = (string)$category["name"];
-            $parentId = (string)$category["parentId"];
-            $listingAllowed = (bool)$category["listingAllowed"];
+            $id = $category["id"];
+            $name = $category["name"];
+            $parentId = $category["parentId"];
+            $listingAllowed = $category["listingAllowed"];
 
             $categoryList->add(new Category($id, $name, $parentId, $listingAllowed));
         }
