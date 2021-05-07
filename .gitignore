@@ -3,4 +3,4 @@ build/*
 /vendor/
 .env
 var/*
-.php_cs.cache
+.php-cs-fixer.cache

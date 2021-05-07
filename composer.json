@@ -20,10 +20,10 @@
     },
     "scripts": {
         "phpcs": [
-            "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist"
+            "vendor/bin/php-cs-fixer fix src --rules=@PSR12"
         ],
         "phpcs-dry": [
-            "vendor/bin/php-cs-fixer fix --config=./.php_cs.dist --dry-run"
+            "vendor/bin/php-cs-fixer fix src --rules=@PSR12 --dry-run"
         ],
         "psalm": [
             "vendor/bin/psalm.phar"
