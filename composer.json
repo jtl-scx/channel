@@ -4,13 +4,13 @@
     "require": {
         "symfony/console": "^5.0",
         "symfony/dotenv": "^5.0",
-        "jtl-scx/channel-core": "^0.56.1",
+        "jtl-scx/channel-core": "^0.56",
         "monolog/monolog": "^2.0",
         "twig/twig": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
-        "friendsofphp/php-cs-fixer": "^2.15"
+        "friendsofphp/php-cs-fixer": "^3.0"
     },
     "autoload": {
         "psr-4": {
