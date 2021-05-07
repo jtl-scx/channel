@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * This File is part of JTL-Software
  *
@@ -7,7 +9,6 @@
  */
 
 namespace JTL\SCX\Channel\Demo\MetaData;
-
 
 use JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader as SellerAttributeLoaderInterface;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeList;

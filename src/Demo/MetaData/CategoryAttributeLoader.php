@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * This File is part of JTL-Software
  *
@@ -8,7 +10,6 @@
 
 namespace JTL\SCX\Channel\Demo\MetaData;
 
-
 use JTL\SCX\Lib\Channel\Contract\MetaData\MetaDataCategoryAttributeLoader;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\Attribute;
 use JTL\SCX\Lib\Channel\MetaData\Attribute\AttributeList;
@@ -17,12 +18,10 @@ use JTL\SCX\Lib\Channel\MetaData\Attribute\CategoryAttributeList;
 
 class CategoryAttributeLoader implements MetaDataCategoryAttributeLoader
 {
-
     public function fetch(array $categoryIdList = null): ?CategoryAttributeList
     {
         $categoryAttributeList = new CategoryAttributeList();
-        foreach ($categoryIdList as $categoryId) {
-
+        foreach ($categoryIdList ?? [] as $categoryId) {
             $attributeList = new AttributeList();
             foreach ($this->loadAttributesById($categoryId) as $attribute) {
                 $attribute = new Attribute(
