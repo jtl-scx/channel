@@ -610,16 +610,16 @@
         },
         {
             "name": "jtl-scx/channel-core",
-            "version": "0.58.0",
+            "version": "0.58.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-core.git",
-                "reference": "067d66d06f50fbf1eff7b3e70b320d66d7b151bb"
+                "reference": "9bc596d9ec29f3052a42a3db5ec98cc5cda70c1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/067d66d06f50fbf1eff7b3e70b320d66d7b151bb",
-                "reference": "067d66d06f50fbf1eff7b3e70b320d66d7b151bb",
+                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/9bc596d9ec29f3052a42a3db5ec98cc5cda70c1e",
+                "reference": "9bc596d9ec29f3052a42a3db5ec98cc5cda70c1e",
                 "shasum": ""
             },
             "require": {
@@ -664,9 +664,9 @@
             "description": "SCX Channel Library",
             "support": {
                 "issues": "https://github.com/jtl-scx/channel-core/issues",
-                "source": "https://github.com/jtl-scx/channel-core/tree/0.58.0"
+                "source": "https://github.com/jtl-scx/channel-core/tree/0.58.2"
             },
-            "time": "2021-05-27T07:29:07+00:00"
+            "time": "2021-06-04T13:54:34+00:00"
         },
         {
             "name": "jtl/nachricht",
