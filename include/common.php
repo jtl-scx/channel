@@ -14,8 +14,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = new Dotenv();
 $dotenv->loadEnv(__DIR__ . '/../.env');
 
-$isDevelopment = $_ENV['IS_DEVELOPMENT'] === 'true';
+ini_set('error_log', $_ENV['LOG_ERROR_CLI'] ?? __DIR__ . '/../php_error.log');
 
+$isDevelopment = $_ENV['IS_DEVELOPMENT'] === 'true';
 $rootDirectory = realpath(__DIR__ . '/..');
 
 $containerCache = $_ENV['DI_CONTAINER_CACHE'];

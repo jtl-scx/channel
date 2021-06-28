@@ -4,3 +4,4 @@ build/*
 .env
 var/*
 .php-cs-fixer.cache
+php_error.log
