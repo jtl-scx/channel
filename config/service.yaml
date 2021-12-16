@@ -37,6 +37,27 @@ services:
   # JTL\SCX\Lib\Channel\Contract\MetaData\SellerAttributeLoader:
   #   class: JTL\SCX\Channel\MetaData\Attribute\SellerAttributeLoader
 
+  # >>>Monitoring: Metric Collection for Message Consumer
+
+  # switch Dispatcher
+  # JTL\Nachricht\Dispatcher\AmqpDispatcher: '@JTL\SCX\Lib\Channel\Core\Metrics\CountingAmqpDispatcher'
+
+  # Setup Client
+  # GuzzleHttp.ClientInterface.GoPrometrics:
+  #  class: GuzzleHttp\Client
+  #  public: true
+  #  arguments:
+  #    # use a small timeout - because metrics collection is fast and must not consume time.
+  #    - timeout: 0.3
+  #
+  # JTL\GoPrometrics\Client\Counter:
+  #  public: true
+  #  arguments:
+  #    - '@GuzzleHttp.ClientInterface.GoPrometrics'
+  #    - '%env(METRIC_COLLECTION_URL)%'
+
+  # <<<Monitoring: Metric Collection for Message Consumer
+
   # Add your additional services below
 
 
