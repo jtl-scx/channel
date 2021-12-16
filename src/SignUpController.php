@@ -21,7 +21,7 @@ class SignUpController extends AbstractSignUpController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index(?string $session, ?string $expiresAt): void
+    public function index(?string $session, ?string $expiresAt, ?bool $isUpdate = null): void
     {
         $this->renderTemplate();
     }
