@@ -1,9 +1,8 @@
 <?php
 /**
- * This File is part of JTL-Software
- *
- * User: pkanngiesser
- * Date: 2019/10/04
+ * This is an example implementation to show haw a signup process may be implemented.
+ * Feel free to drop this and build your own Seller Sign-Up see
+ * https://github.com/jtl-scx/channel/blob/master/docs/021_seller_signup.md
  */
 
 use JTL\SCX\Channel\SignUpController;
@@ -20,5 +19,5 @@ $controller = $container->get(SignUpController::class);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $controller->signUp($username, $password, $session);
 } else {
-    $controller->index($session);
+    $controller->index($session, null, null);
 }
