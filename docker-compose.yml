@@ -2,23 +2,24 @@ version: "3"
 services:
 
   chn-app:
-    build: docker/chn-app
+    image: jtlsoftware/scx-php-app:1.0-php8.0
     working_dir: /application
+    environment:
+      PHP_IDE_CONFIG: "serverName=channel-app"
+      ENABLE_XDEBUG: 1
+      XDEBUG_PORT: 9000
+      XDEBUG_HOST: host.docker.internal
+    ports:
+     # - "19000:9000"
+      - "8080:8181"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
+      # add your own php.ini
+      # - ./php.ini:/etc/php8/conf.d/99_php.ini
       - ./:/application/source
-      - ./var:/application/var:rw
 
   chn-queue:
     image: rabbitmq:management-alpine
     ports:
       - "15672:15672"
-
-  chn-web:
-    image: nginx:latest
-    working_dir: /application
-    volumes:
-      - ./docker/chn-web/nginx.conf:/etc/nginx/conf.d/default.conf
-      - .:/application/source
-      - ./var:/application/var
-    ports:
-      - "8080:8181"
