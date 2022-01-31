@@ -582,16 +582,16 @@
         },
         {
             "name": "jtl-scx/channel-core",
-            "version": "0.73.0",
+            "version": "0.73.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtl-scx/channel-core.git",
-                "reference": "7293e142f3269b9940298030f95e8e4bd587c9fa"
+                "reference": "93166eb39fb165f16f297203307bd6438124c723"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/7293e142f3269b9940298030f95e8e4bd587c9fa",
-                "reference": "7293e142f3269b9940298030f95e8e4bd587c9fa",
+                "url": "https://api.github.com/repos/jtl-scx/channel-core/zipball/93166eb39fb165f16f297203307bd6438124c723",
+                "reference": "93166eb39fb165f16f297203307bd6438124c723",
                 "shasum": ""
             },
             "require": {
@@ -639,9 +639,9 @@
             "description": "SCX Channel Library",
             "support": {
                 "issues": "https://github.com/jtl-scx/channel-core/issues",
-                "source": "https://github.com/jtl-scx/channel-core/tree/0.73.0"
+                "source": "https://github.com/jtl-scx/channel-core/tree/0.73.1"
             },
-            "time": "2022-01-25T08:58:20+00:00"
+            "time": "2022-01-25T10:09:03+00:00"
         },
         {
             "name": "jtl/nachricht",
