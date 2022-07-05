@@ -2,7 +2,7 @@ version: "3"
 services:
 
   chn-app:
-    image: jtlsoftware/scx-php-app:1.0-php8.0
+    image: jtlsoftware/scx-php-app:1.0-php8.1
     working_dir: /application
     environment:
       PHP_IDE_CONFIG: "serverName=channel-app"
@@ -20,6 +20,6 @@ services:
       - ./:/application/source
 
   chn-queue:
-    image: rabbitmq:management-alpine
+    build: docker/rabbitmq
     ports:
       - "15672:15672"
