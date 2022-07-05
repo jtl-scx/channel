@@ -5,7 +5,7 @@
         "php": "8.0.*",
         "symfony/console": "^5.0",
         "symfony/dotenv": "^6.0",
-        "jtl-scx/channel-core": "^0.73.0",
+        "jtl-scx/channel-core": "^0.77.1",
         "monolog/monolog": "^2.0",
         "twig/twig": "^3.3"
     },
