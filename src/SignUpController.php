@@ -55,7 +55,7 @@ class SignUpController extends AbstractSignUpController
     {
         $signUpSuccessful = false;
 
-        if ($username && $password) {
+        if ($username !== null && $password !== null) {
 
             // validate credentials
 
