@@ -6,7 +6,7 @@ jobs:
 
   static-analysis:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -32,7 +32,7 @@ jobs:
 
   check-code-style:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -58,7 +58,7 @@ jobs:
 
   tests:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
